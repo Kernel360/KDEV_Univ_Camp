@@ -1,0 +1,172 @@
+/* 전체 레이아웃 설정 */
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  height: 100vh; /* 전체 화면 높이에 맞춤 */
+  box-sizing: border-box;
+}
+
+/* 사이드바 설정 */
+.sidebar-section {
+  width: 25%;
+  min-width: 300px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* 내부 요소 간 간격 */
+}
+
+/* 사용자 섹션 */
+.user-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* 사용자 이미지와 텍스트/버튼 간격 */
+}
+
+/* 사용자 이미지 */
+.user-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.user-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+/* 사용자 텍스트 */
+.user-info-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* 로그인/회원가입 버튼 */
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.login-button,
+.signup-button {
+  padding: 10px 15px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.login-button:hover,
+.signup-button:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+/* 메뉴 설정 */
+.menu {
+  margin-top: 20px;
+}
+
+.menu h2 {
+  margin-bottom: 10px;
+}
+
+.menu p {
+  line-height: 1.5;
+}
+
+/* 메인 섹션 설정 */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 20px;
+  height: 100%; /* 사이드바와 동일한 높이 유지 */
+  box-sizing: border-box;
+}
+
+/* 뷰어, 차트, 테이블 */
+.viewer-section,
+.chart-section,
+.table-section {
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 차트 및 테이블 설정 */
+.chart-container,
+.table-container {
+  margin-top: 20px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #dddddd;
+  padding: 8px 12px;
+}
+
+.styled-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.styled-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* 서브메뉴 스타일 */
+.sub-menu {
+  margin-top: 10px;
+  padding-left: 20px; /* 들여쓰기 */
+}
+
+.sub-menu li {
+  margin-bottom: 10px;
+}
+
+.sub-menu-button {
+  padding: 8px 12px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.sub-menu-button:hover {
+  background-color: rgb(240, 240, 240);
+}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import userImage from "./user-circle.png";
 
 const Sidebar = () => {
   const [userName] = useState("000님"); // 사용자 이름 설정
@@ -24,7 +23,7 @@ const Sidebar = () => {
       <div className="user-section">
         {/* 사용자 이미지 */}
         <div className="user-image-container">
-          <img src={userImage} alt="User" className="user-image" />
+          <img src="/user-circle.png" alt="User" className="user-image" />
         </div>
         {/* 사용자 정보 텍스트 */}
         <div className="user-info-text">

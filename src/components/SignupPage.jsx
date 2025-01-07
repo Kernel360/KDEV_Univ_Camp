@@ -1,5 +1,5 @@
 import React from "react";
-import "./auth.css";
+import "./signup.css";
 
 const SignupPage = () => {
   const handleSignup = (e) => {

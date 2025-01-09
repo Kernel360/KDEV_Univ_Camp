@@ -110,18 +110,154 @@
   box-sizing: border-box;
 }
 
-/* 차트 및 테이블 설정 */
-.chart-container,
-.table-container {
-  margin-top: 20px;
+/* Viewer Section */
+.viewer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+.viewer-header {
+  display: flex;
+  justify-content: space-between; /* 제목과 컨트롤을 양쪽 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+}
+
+.viewer-title {
+  font-size: 24px; /* 제목 크기 */
+  font-weight: bold;
+  margin: 0;
+}
+
+.viewer-controls {
+  display: flex;
+  flex-wrap: wrap; /* 화면이 좁아질 경우 줄바꿈 */
+  gap: 10px; /* 버튼 및 입력 필드 간격 */
+  align-items: center;
+}
+
+.viewer-controls select,
+.viewer-controls input[type="date"],
+.viewer-controls button {
+  padding: 8px 12px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.viewer-controls input[type="date"] {
+  width: auto;
+  max-width: 150px; /* 날짜 필드 크기 제한 */
+}
+
+.viewer-controls button:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.viewer-controls .date-picker {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* 날짜 필드 간 간격 */
+}
+
+/* Viewer Buttons */
+.viewer-controls .viewer-button {
+  padding: 8px 12px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.viewer-controls .viewer-button:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+/* Chart Section */
+.chart-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between; /* 제목과 컨트롤을 양쪽 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+}
+
+.chart-title {
+  font-size: 24px; /* 제목 크기 */
+  font-weight: bold;
+  margin: 0;
+}
+
+.chart-controls {
+  display: flex;
+  flex-wrap: wrap; /* 화면이 좁아질 경우 줄바꿈 */
+  gap: 10px; /* 컨트롤 요소 간 간격 */
+  align-items: center;
+}
+
+.chart-controls select,
+.chart-controls input[type="date"],
+.chart-controls button {
+  padding: 8px 12px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chart-controls input[type="date"] {
+  width: auto;
+  max-width: 150px; /* 날짜 필드 크기 제한 */
+}
+
+.chart-controls button:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.chart-controls .date-picker {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* 날짜 필드 간 간격 */
+}
+
+/* Chart Buttons */
+.chart-controls .chart-button {
+  padding: 8px 12px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.chart-controls .chart-button:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+/* 테이블 스타일 */
 .styled-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9em;
   font-family: Arial, sans-serif;
-  text-align: left;
 }
 
 .styled-table th,

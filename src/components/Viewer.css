@@ -1,0 +1,92 @@
+.viewer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+/* 상단: 차량 번호 */
+.viewer-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 중단: 왼쪽 버튼, 오른쪽 컨트롤 */
+.viewer-middle {
+  display: flex;
+  justify-content: space-between; /* 왼쪽과 오른쪽에 공간 확보 */
+  align-items: center;
+}
+
+/* 왼쪽: 편집하기, 목록 버튼 */
+.left-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* 오른쪽: 드롭다운, 날짜 입력, 검색 버튼 */
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.viewer-select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.date-inputs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.date-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.date-separator {
+  font-size: 16px;
+  margin: 0 5px;
+  color: #333;
+}
+
+/* 버튼 스타일 */
+.viewer-button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.viewer-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* 하단: 출력 버튼 */
+.viewer-footer {
+  display: flex;
+  justify-content: flex-end; /* 버튼 오른쪽 끝 정렬 */
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+}

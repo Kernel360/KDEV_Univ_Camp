@@ -1,143 +1,64 @@
-/* 전체 레이아웃 설정 */
 .App {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
   gap: 20px;
-  height: 100vh; /* 전체 화면 높이에 맞춤 */
+  height: 100%;
   box-sizing: border-box;
+  padding: 20px;
+  background-color: #f5f5f5; /* 배경색 추가 */
 }
 
 /* 사이드바 설정 */
 .sidebar-section {
   width: 25%;
   min-width: 300px;
-  background-color: rgb(245, 245, 245);
-  border: 1px solid rgb(240, 240, 240);
-  border-radius: 5px;
+  background-color: #ffffff; /* 흰색으로 통일 */
+  border-radius: 8px;
   padding: 20px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* 내부 요소 간 간격 */
-}
-
-/* 사용자 섹션 */
-.user-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px; /* 사용자 이미지와 텍스트/버튼 간격 */
-}
-
-/* 사용자 이미지 */
-.user-image-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.user-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 1px solid rgb(200, 200, 200);
-}
-
-/* 사용자 텍스트 */
-.user-info-text {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-}
-
-/* 로그인/회원가입 버튼 */
-.auth-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-}
-
-.login-button,
-.signup-button {
-  padding: 10px 15px;
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 5px;
-  background-color: white;
-  cursor: pointer;
-}
-
-.login-button:hover,
-.signup-button:hover {
-  background-color: rgb(240, 240, 240);
-}
-
-/* 메뉴 설정 */
-.menu {
-  margin-top: 20px;
-}
-
-.menu h2 {
-  margin-bottom: 10px;
-}
-
-.menu p {
-  line-height: 1.5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
 }
 
 /* 메인 섹션 설정 */
 .main-section {
+  width: 75%;
   display: flex;
   flex-direction: column;
-  width: 75%;
   gap: 20px;
-  height: 100%; /* 사이드바와 동일한 높이 유지 */
-  box-sizing: border-box;
-}
-
-/* 뷰어, 차트, 테이블 */
-.viewer-section,
-.chart-section,
-.table-section {
-  width: 100%;
-  background-color: rgb(245, 245, 245);
-  border: 1px solid rgb(240, 240, 240);
-  border-radius: 5px;
+  background-color: #ffffff; /* 흰색으로 통일 */
+  border-radius: 8px;
   padding: 20px;
   box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
 }
 
-/* Viewer Section */
+/* Viewer 스타일 */
 .viewer-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: rgb(245, 245, 245);
-  border: 1px solid rgb(240, 240, 240);
-  border-radius: 5px;
   padding: 20px;
+  background-color: #ffffff; /* 흰색으로 통일 */
+  border-radius: 8px;
   box-sizing: border-box;
 }
 
 .viewer-header {
   display: flex;
-  justify-content: space-between; /* 제목과 컨트롤을 양쪽 정렬 */
-  align-items: center; /* 세로 가운데 정렬 */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .viewer-title {
-  font-size: 24px; /* 제목 크기 */
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
 
 .viewer-controls {
   display: flex;
-  flex-wrap: wrap; /* 화면이 좁아질 경우 줄바꿈 */
-  gap: 10px; /* 버튼 및 입력 필드 간격 */
+  flex-wrap: wrap;
+  gap: 10px;
   align-items: center;
 }
 
@@ -145,111 +66,25 @@
 .viewer-controls input[type="date"],
 .viewer-controls button {
   padding: 8px 12px;
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: white;
   font-size: 14px;
   cursor: pointer;
-}
-
-.viewer-controls input[type="date"] {
-  width: auto;
-  max-width: 150px; /* 날짜 필드 크기 제한 */
+  background-color: #f9f9f9;
 }
 
 .viewer-controls button:hover {
-  background-color: rgb(240, 240, 240);
+  background-color: #f0f0f0;
 }
 
-.viewer-controls .date-picker {
-  display: flex;
-  align-items: center;
-  gap: 5px; /* 날짜 필드 간 간격 */
-}
-
-/* Viewer Buttons */
-.viewer-controls .viewer-button {
-  padding: 8px 12px;
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: white;
-}
-
-.viewer-controls .viewer-button:hover {
-  background-color: rgb(240, 240, 240);
-}
-
-/* Chart Section */
-.chart-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: rgb(245, 245, 245);
-  border: 1px solid rgb(240, 240, 240);
-  border-radius: 5px;
+/* 테이블 섹션 */
+.table-section {
+  width: 100%;
+  border-radius: 8px;
   padding: 20px;
+  background-color: #ffffff; /* 흰색으로 통일 */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-}
-
-.chart-header {
-  display: flex;
-  justify-content: space-between; /* 제목과 컨트롤을 양쪽 정렬 */
-  align-items: center; /* 세로 가운데 정렬 */
-}
-
-.chart-title {
-  font-size: 24px; /* 제목 크기 */
-  font-weight: bold;
-  margin: 0;
-}
-
-.chart-controls {
-  display: flex;
-  flex-wrap: wrap; /* 화면이 좁아질 경우 줄바꿈 */
-  gap: 10px; /* 컨트롤 요소 간 간격 */
-  align-items: center;
-}
-
-.chart-controls select,
-.chart-controls input[type="date"],
-.chart-controls button {
-  padding: 8px 12px;
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 5px;
-  background-color: white;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.chart-controls input[type="date"] {
-  width: auto;
-  max-width: 150px; /* 날짜 필드 크기 제한 */
-}
-
-.chart-controls button:hover {
-  background-color: rgb(240, 240, 240);
-}
-
-.chart-controls .date-picker {
-  display: flex;
-  align-items: center;
-  gap: 5px; /* 날짜 필드 간 간격 */
-}
-
-/* Chart Buttons */
-.chart-controls .chart-button {
-  padding: 8px 12px;
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: white;
-}
-
-.chart-controls .chart-button:hover {
-  background-color: rgb(240, 240, 240);
 }
 
 /* 테이블 스타일 */
@@ -283,26 +118,4 @@
 .styled-table td {
   text-align: center;
   vertical-align: middle;
-}
-
-/* 서브메뉴 스타일 */
-.sub-menu {
-  margin-top: 10px;
-  padding-left: 20px; /* 들여쓰기 */
-}
-
-.sub-menu li {
-  margin-bottom: 10px;
-}
-
-.sub-menu-button {
-  padding: 8px 12px;
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 5px;
-  background-color: white;
-  cursor: pointer;
-}
-
-.sub-menu-button:hover {
-  background-color: rgb(240, 240, 240);
 }

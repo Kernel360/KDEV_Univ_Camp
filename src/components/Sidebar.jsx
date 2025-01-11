@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import userImage from "../assets/user-circle.png"; // 상대 경로 수정
+import userImage from "../assets/user-circle.png";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const [userName, setUserName] = useState("로그인하세요");

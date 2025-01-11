@@ -15,13 +15,13 @@ const Chart = ({ selectedDate }) => {
         <tbody>
           <tr>
             <td>
-              {[selectedDate.startDate, selectedDate.endDate]
-                .filter(Boolean)
-                .join(" - ")}
+              {selectedDate.startDate && selectedDate.endDate
+                ? `${selectedDate.startDate} - ${selectedDate.endDate}`
+                : ""}
             </td>
-            <td></td> {/* 값 입력 전까지 비워둠 */}
-            <td></td> {/* 값 입력 전까지 비워둠 */}
-            <td></td> {/* 값 입력 전까지 비워둠 */}
+            <td>&nbsp;</td> {/* 빈 셀은 &nbsp;로 대체 */}
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
           </tr>
         </tbody>
       </table>

@@ -32,7 +32,11 @@ function App() {
                 />
               </div>
               <div className="chart-section">
-                <Chart selectedDate={selectedDate} />
+                {selectedDate.startDate && selectedDate.endDate ? (
+                  <Chart selectedDate={selectedDate} />
+                ) : (
+                  <p>날짜를 선택하세요.</p>
+                )}
               </div>
               <div className="table-section">
                 <Table />

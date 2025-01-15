@@ -1,0 +1,150 @@
+/* 사용자 정보 */
+.user-info {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 왼쪽 세로 아이콘 컴포넌트 */
+.vertical-sidebar {
+  width: 60px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-sidebar img {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.vertical-sidebar img:hover {
+  transform: scale(1.1);
+}
+
+.user-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.auth-buttons button:hover {
+  background-color: #f0f0f0;
+}
+
+/* 전체 레이아웃 */
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 왼쪽 사이드바 */
+.left-sidebar {
+  width: 300px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.icon-menu {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-menu img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.icon-menu img:hover {
+  transform: scale(1.1);
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* 지도 */
+.map-container {
+  flex-grow: 1;
+  height: 100vh;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* 스타일: 각 섹션 */
+.date-search,
+.search-section,
+.stats-container {
+  text-align: center;
+}
+
+.date-picker input,
+.vehicle-search input,
+.vehicle-search select {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.vehicle-search button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.vehicle-search button:hover {
+  background-color: #45a049;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-card {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

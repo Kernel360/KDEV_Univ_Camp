@@ -1,0 +1,21 @@
+.vehicle-search input,
+.vehicle-search select {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.vehicle-search button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.vehicle-search button:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,34 @@
+/* 왼쪽 사이드바 */
+.left-sidebar {
+  width: 300px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.icon-menu {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-menu img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.icon-menu img:hover {
+  transform: scale(1.1);
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}

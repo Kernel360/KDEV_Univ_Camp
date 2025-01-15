@@ -1,0 +1,30 @@
+/* 사용자 정보 */
+.user-info {
+  text-align: center;
+  padding: 20px;
+}
+
+.user-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.auth-buttons button:hover {
+  background-color: #f0f0f0;
+}

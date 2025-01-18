@@ -3,7 +3,7 @@ import "./PeriodSearch.css";
 
 const PeriodSearch = () => {
   return (
-    <div className="date-search">
+    <div className="date-search common-width">
       <h3>기간 검색</h3>
       <div className="date-picker">
         <input type="date" />
@@ -15,4 +15,4 @@ const PeriodSearch = () => {
   );
 };
 
-export default PeriodSearch;
+export default PeriodSearch; // export default 추가

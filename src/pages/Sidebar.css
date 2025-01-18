@@ -1,34 +1,21 @@
-/* 전체 사이드바 컨테이너 */
+/* 사이드바 고정 크기 */
 .sidebar-container {
-  display: flex;
-  flex-direction: row; /* 좌우로 분리 */
+  width: 300px; /* 사이드바 너비 고정 */
   height: 100vh; /* 화면 전체 높이 */
-  width: 100%; /* 전체 너비 */
-  background-color: #f4f4f4;
-  overflow: hidden; /* 넘침 방지 */
-}
-
-/* 아이콘 메뉴 */
-.icon-menu {
-  display: flex;
-  flex-direction: column; /* 세로 정렬 */
-  justify-content: flex-start; /* 상단 정렬 */
-  align-items: center; /* 가로 중앙 정렬 */
-  width: 80px; /* 아이콘 메뉴 너비 */
-  background-color: #eaeaea;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 오른쪽 그림자 */
-  height: 100%; /* 부모 높이에 맞춤 */
+  overflow-y: auto; /* 세로 스크롤 허용 */
+  overflow-x: hidden; /* 가로 넘침 방지 */
   flex-shrink: 0; /* 크기 축소 방지 */
-  position: fixed; /* 화면의 왼쪽 끝에 고정 */
-  left: 0;
+  position: fixed; /* 화면 왼쪽에 고정 */
   top: 0;
+  left: 0;
 }
 
-/* 사이드바 콘텐츠 영역 */
+/* 콘텐츠 영역 고정 크기 */
 .content-area {
-  margin-left: 80px; /* 아이콘 메뉴 너비만큼 여백 추가 */
-  flex-grow: 1; /* 나머지 공간을 차지 */
-  padding: 20px;
+  width: calc(100% - 300px); /* 사이드바 크기 제외 */
+  height: 100vh; /* 화면 높이에 맞춤 */
+  flex-shrink: 0; /* 크기 축소 방지 */
+  padding: 20px; /* 여백 설정 */
   overflow-y: auto; /* 스크롤 허용 */
   background-color: #ffffff; /* 배경색 */
 }

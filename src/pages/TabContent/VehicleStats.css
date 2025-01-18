@@ -1,8 +1,24 @@
+/* 공통 너비 스타일 */
+.common-width {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .stats-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
   text-align: center;
+}
+
+/* 공통 너비 적용 */
+.stats-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .stat-card {

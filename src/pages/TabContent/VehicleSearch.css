@@ -1,3 +1,11 @@
+/* 공통 너비 스타일 */
+.common-width {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .vehicle-search input,
 .vehicle-search select {
   width: 90%;
@@ -18,4 +26,12 @@
 
 .vehicle-search button:hover {
   background-color: #45a049;
+}
+
+/* 공통 너비 적용 */
+.search-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }

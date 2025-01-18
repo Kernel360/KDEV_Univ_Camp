@@ -19,9 +19,11 @@ const Sidebar = ({ activeTab, setActiveTab, navigate }) => {
   };
 
   return (
-    <div className="content-area">
-      <UserInfo navigate={navigate} />
-      {renderContent()}
+    <div className="sidebar-container">
+      <div className="content-area">
+        <UserInfo navigate={navigate} />
+        {renderContent()}
+      </div>
     </div>
   );
 };

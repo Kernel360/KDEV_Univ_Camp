@@ -3,10 +3,6 @@ import UserInfo from "./UserInfo";
 import PeriodSearch from "./TabContent/PeriodSearch";
 import VehicleSearch from "./TabContent/VehicleSearch";
 import VehicleStats from "./TabContent/VehicleStats";
-import periodIcon from "../assets/calendar.png";
-import searchIcon from "../assets/car.png";
-import statsIcon from "../assets/map.png";
-import "./Sidebar.css";
 
 const Sidebar = ({ activeTab, setActiveTab, navigate }) => {
   const renderContent = () => {
@@ -23,26 +19,9 @@ const Sidebar = ({ activeTab, setActiveTab, navigate }) => {
   };
 
   return (
-    <div className="left-sidebar">
+    <div className="content-area">
       <UserInfo navigate={navigate} />
-      <div className="content-area">{renderContent()}</div>
-      <div className="icon-menu">
-        <img
-          src={periodIcon}
-          alt="기간검색"
-          onClick={() => setActiveTab("기간검색")}
-        />
-        <img
-          src={searchIcon}
-          alt="차량검색"
-          onClick={() => setActiveTab("차량검색")}
-        />
-        <img
-          src={statsIcon}
-          alt="차량정보"
-          onClick={() => setActiveTab("차량정보")}
-        />
-      </div>
+      {renderContent()}
     </div>
   );
 };

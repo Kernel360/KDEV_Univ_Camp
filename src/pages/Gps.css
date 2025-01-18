@@ -2,13 +2,23 @@
 .app-container {
   display: flex;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* 넘침 방지 */
 }
 
-/* 지도 */
+/* 사이드바 */
+.sidebar-container {
+  flex-shrink: 0;
+  width: 300px; /* Sidebar의 너비를 명확히 설정 */
+  height: 100vh; /* 부모 컨테이너의 높이에 맞춤 */
+  overflow-y: auto; /* 사이드바 내용 스크롤 허용 */
+  background-color: #f4f4f4;
+}
+
+/* 지도 컨테이너 */
 .map-container {
-  flex-grow: 1;
-  height: 100vh;
+  flex-grow: 1; /* 나머지 공간을 차지 */
+  height: 100vh; /* 부모 컨테이너의 높이에 맞춤 */
+  overflow: hidden; /* 넘침 방지 */
 }
 
 #map {

@@ -9,3 +9,9 @@ body {
 #root {
   height: 100%;
 }
+
+/* Tailwind CSS 기본 스타일 가져오기 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/

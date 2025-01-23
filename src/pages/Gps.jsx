@@ -11,7 +11,7 @@ const Gps = () => {
 
   return (
     <div className="app-container">
-      <IconMenu setActiveTab={setActiveTab} /> {/* IconMenu 추가 */}
+      <IconMenu setActiveTab={setActiveTab} /> {/* 아이콘 메뉴 */}
       <Sidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}

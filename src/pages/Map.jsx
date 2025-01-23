@@ -1,42 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Map.css";
 import carIcon from "../assets/carMarker.png";
 
 const Map = () => {
+  const [positions, setPositions] = useState([]);
+  let map = null;
+  let polyline = null;
+
   useEffect(() => {
     const initMap = () => {
       if (window.kakao && window.kakao.maps) {
         const container = document.getElementById("map");
         const options = {
-          center: new window.kakao.maps.LatLng(33.450701, 126.570667), // 초기 지도 중심좌표
-          level: 10, // 확대 레벨
+          center: new window.kakao.maps.LatLng(37.566826, 126.9786567),
+          level: 7,
         };
-        const map = new window.kakao.maps.Map(container, options);
+        map = new window.kakao.maps.Map(container, options);
 
-        // HTML5 Geolocation 사용 여부 확인
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function (position) {
-            const lat = position.coords.latitude; // 위도
-            const lon = position.coords.longitude; // 경도
+        map.addOverlayMapTypeId(window.kakao.maps.MapTypeId.TERRAIN);
 
-            const locPosition = new window.kakao.maps.LatLng(lat, lon); // 접속 위치 좌표
-            const message = '<div style="padding:5px;">현재위치</div>'; // 인포윈도우 내용
+        trackLocation();
+        const intervalId = setInterval(() => {
+          trackLocation();
+        }, 60000);
 
-            // 마커와 인포윈도우 표시
-            displayMarker(locPosition, message, true); // Geolocation으로 생성된 마커는 커스텀 이미지 사용
-          });
-        } else {
-          const locPosition = new window.kakao.maps.LatLng(
-            33.450701,
-            126.570667
-          );
-          const message = "geolocation을 사용할수 없어요..";
-
-          // 마커와 인포윈도우 표시
-          displayMarker(locPosition, message, false); // 기본 위치 마커 생성
-        }
-
-        // 지도 클릭 이벤트 추가
         window.kakao.maps.event.addListener(
           map,
           "click",
@@ -50,39 +37,7 @@ const Map = () => {
           }
         );
 
-        // 지도에 마커와 인포윈도우 표시 함수
-        function displayMarker(locPosition, message, useCustomIcon) {
-          const markerOptions = {
-            map: map,
-            position: locPosition,
-          };
-
-          if (useCustomIcon) {
-            const imageSize = new window.kakao.maps.Size(50, 75);
-            const imageOption = { offset: new window.kakao.maps.Point(25, 75) };
-
-            const markerImage = new window.kakao.maps.MarkerImage(
-              carIcon,
-              imageSize,
-              imageOption
-            );
-            markerOptions.image = markerImage; // 커스텀 이미지 적용
-          }
-
-          const marker = new window.kakao.maps.Marker(markerOptions);
-
-          const iwContent = message; // 인포윈도우 내용
-          const iwRemoveable = true; // 인포윈도우 닫기 버튼
-
-          const infowindow = new window.kakao.maps.InfoWindow({
-            content: iwContent,
-            removable: iwRemoveable,
-          });
-
-          infowindow.open(map, marker); // 인포윈도우 표시
-
-          map.setCenter(locPosition); // 지도 중심 좌표 변경
-        }
+        return () => clearInterval(intervalId);
       } else {
         console.error("Kakao maps API가 로드되지 않았습니다.");
       }
@@ -99,7 +54,77 @@ const Map = () => {
     };
   }, []);
 
-  return <div id="map" className="map-container"></div>;
+  const trackLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        const newPosition = new window.kakao.maps.LatLng(lat, lon);
+        setPositions((prevPositions) => [...prevPositions, newPosition]);
+
+        displayMarker(
+          newPosition,
+          '<div style="padding:5px;">현재위치</div>',
+          true
+        );
+        drawPolyline();
+      });
+    } else {
+      console.error("Geolocation을 지원하지 않습니다.");
+    }
+  };
+
+  const displayMarker = (position, message, useCustomIcon) => {
+    const markerOptions = {
+      map: map,
+      position: position,
+    };
+
+    if (useCustomIcon) {
+      const imageSize = new window.kakao.maps.Size(50, 75);
+      const imageOption = { offset: new window.kakao.maps.Point(25, 75) };
+      const markerImage = new window.kakao.maps.MarkerImage(
+        carIcon,
+        imageSize,
+        imageOption
+      );
+      markerOptions.image = markerImage;
+    }
+
+    const marker = new window.kakao.maps.Marker(markerOptions);
+    const infowindow = new window.kakao.maps.InfoWindow({
+      content: message,
+      removable: true,
+    });
+
+    infowindow.open(map, marker);
+    map.setCenter(position);
+  };
+
+  const drawPolyline = () => {
+    if (positions.length > 1) {
+      if (polyline) polyline.setMap(null);
+
+      polyline = new window.kakao.maps.Polyline({
+        path: positions,
+        strokeWeight: 5,
+        strokeColor: "#FF0000",
+        strokeOpacity: 0.8,
+        strokeStyle: "solid",
+      });
+
+      polyline.setMap(map);
+    }
+  };
+
+  return (
+    <div
+      id="map"
+      className="map-container"
+      style={{ width: "100%", height: "100%" }}
+    ></div>
+  );
 };
 
 export default Map;

@@ -9,7 +9,7 @@ const BASE_URL =
  */
 export const signup = async (username, password, nickname) => {
   try {
-    const response = await fetch(`${BASE_URL}/api/authenticate`, {
+    const response = await fetch(`${BASE_URL}/api/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

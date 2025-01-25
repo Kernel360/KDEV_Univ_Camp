@@ -1,5 +1,5 @@
 const BASE_URL =
-  "http://ec2-3-35-4-55.ap-northeast-2.compute.amazonaws.com:8080";
+  "http://ec2-52-79-227-43.ap-northeast-2.compute.amazonaws.com:8080";
 
 /**
  * 회원가입 API 호출 함수

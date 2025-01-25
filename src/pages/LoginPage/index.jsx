@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { login } from "../api/loginApi";
+import { login } from "../../api/loginApi";
 import "./login.css";
 
 const LoginPage = () => {

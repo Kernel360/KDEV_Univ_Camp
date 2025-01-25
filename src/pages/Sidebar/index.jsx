@@ -1,5 +1,5 @@
 import React from "react";
-import UserInfo from "./UserInfo";
+import UserInfo from "./UserInfo/UserInfo";
 import PeriodSearch from "./TabContent/PeriodSearch";
 import VehicleSearch from "./TabContent/VehicleSearch";
 import VehicleStats from "./TabContent/VehicleStats";

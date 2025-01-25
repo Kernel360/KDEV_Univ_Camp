@@ -1,5 +1,5 @@
 import React from "react";
-import userCircle from "../assets/user-circle.png";
+import userCircle from "@/assets/user-circle.png";
 import "./UserInfo.css";
 
 const UserInfo = ({ navigate }) => {

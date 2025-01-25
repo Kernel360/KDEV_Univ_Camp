@@ -12,6 +12,7 @@ export const signup = async (username, password, nickname) => {
     const response = await fetch(`${BASE_URL}/api/signup`, {
       method: "POST",
       headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({

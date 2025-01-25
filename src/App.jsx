@@ -4,8 +4,8 @@ import Viewer from "./components/Viewer";
 import Sidebar from "./components/Sidebar";
 import Chart from "./components/Chart";
 import Table from "./components/Table";
-import LoginPage from "./components/LoginPage";
-import SignupPage from "./components/SignupPage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
 import Gps from "./pages/Gps";
 
 function App() {

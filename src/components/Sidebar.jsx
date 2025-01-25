@@ -47,17 +47,20 @@ const Sidebar = () => {
             className="user-image"
           />
         </div>
-        <div className="user-info-text">
-          <p>{userName}</p>
-        </div>
-        <div className="auth-buttons">
-          <button onClick={handleLogin} className="login-button">
-            로그인
-          </button>
-          <button onClick={handleSignup} className="signup-button">
-            회원가입
-          </button>
-        </div>
+        {localStorage.getItem("token") ? (
+          <div className="user-info-text">
+            <p>{localStorage.getItem("username")}</p>
+          </div>
+        ) : (
+          <div className="auth-buttons">
+            <button onClick={handleLogin} className="login-button">
+              로그인
+            </button>
+            <button onClick={handleSignup} className="signup-button">
+              회원가입
+            </button>
+          </div>
+        )}
       </div>
       <div className="menu">
         <h2>차량 운행 일지 &gt; 상세보기</h2>

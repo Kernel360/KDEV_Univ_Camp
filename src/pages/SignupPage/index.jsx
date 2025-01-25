@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { signup } from "../api/signupApi"; // 회원가입 API 호출
+import { signup } from "../../api/signupApi"; // 회원가입 API 호출
 import "./signup.css";
 
 const SignupPage = () => {

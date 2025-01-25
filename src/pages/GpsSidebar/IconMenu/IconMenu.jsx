@@ -1,7 +1,7 @@
 import React from "react";
-import periodIcon from "../assets/calendar.png";
-import searchIcon from "../assets/car.png";
-import statsIcon from "../assets/map.png";
+import periodIcon from "@/assets/calendar.png";
+import searchIcon from "@/assets/car.png";
+import statsIcon from "@/assets/map.png";
 
 const IconMenu = ({ setActiveTab }) => {
   return (

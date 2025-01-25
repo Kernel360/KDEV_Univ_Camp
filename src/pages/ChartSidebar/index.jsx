@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import userImage from "../assets/user-circle.png";
+import userImage from "@/assets/user-circle.png";
 import "./Sidebar.css";
 
 const Sidebar = () => {

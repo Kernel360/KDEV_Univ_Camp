@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Map.css";
-import carIcon from "../assets/carMarker.png";
+import carIcon from "@/assets/carMarker.png";
 
 const Map = () => {
   const [positions, setPositions] = useState([]);

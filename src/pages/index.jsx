@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Map from "./Map";
-import Sidebar from "./Sidebar";
-import IconMenu from "./IconMenu";
+import Sidebar from "./GpsSidebar";
+import IconMenu from "./GpsSidebar/IconMenu/IconMenu";
 import "./Gps.css";
 
 const Gps = () => {

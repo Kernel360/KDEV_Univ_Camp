@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Viewer from "./components/Viewer";
-import Sidebar from "./components/Sidebar";
-import Chart from "./components/Chart";
-import Table from "./components/Table";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
-import Gps from "./pages/Gps";
+import Viewer from "@/pages/Viewer";
+import Sidebar from "@/pages/ChartSidebar";
+import Chart from "@/pages/Chart";
+import Table from "@/pages/Table";
+import LoginPage from "@/pages/LoginPage";
+import SignupPage from "@/pages/SignupPage";
+import Gps from "@/pages/Gps";
 
 function App() {
   const [selectedDate, setSelectedDate] = useState({
